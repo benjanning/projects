@@ -10,3 +10,5 @@
 
 /* V2: accommodate an explicit working-demo action without crowding narrow screens. */
 .actions{flex-wrap:wrap}.card-links{gap:12px;flex-wrap:wrap}.demo-link{color:#245641!important;font-weight:700}.case-cover.hotel-booking img{max-width:100%}
+
+.demo-disclosure{font-size:11px;line-height:1.8;max-width:550px;color:#606b62;margin-top:-12px}
