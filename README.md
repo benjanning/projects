@@ -38,3 +38,7 @@ Server applications run locally in their own repositories; GitHub Pages does not
 - [Verified sorting measurements](assets/charts/verified_timings.csv)
 
 Original project source and attribution remain in the linked repositories. Source history was preserved; no repository was deleted or made private/public as part of the reorganisation.
+
+## Maintaining the site
+
+Edit the HTML/CSS directly, or regenerate the authored pages using `python supporting-site-files/build-site.py`. The optional chart script takes a parent directory containing local clones of the linked source repositories: `python supporting-site-files/regenerate-charts.py /path/to/repositories`. Run the sorting repository’s benchmark first. Chart regeneration needs the numerical/plotting packages recorded in tested-versions.json. It does not recreate the preserved original coursework PNGs.

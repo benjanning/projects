@@ -18,7 +18,7 @@ Reviewed 19 October 2026. Scope: 14 existing public repositories and the supplie
 | pands-problem-sheet | Smaller Python exercises | Introductory problem-solving; kept as coursework with central portfolio navigation. Not a featured project. |
 | mywork | Introductory programming archive | Weekly practice rather than a complete application; preserved sources and linked central portfolio. |
 | PfDA_Assignment | Practice notebooks | Learning exercises and some skeleton material. Preserved attribution/licence and notebook source; removed generated checkpoint copies and added ignores. |
-| programming2022 | Coursework archive/index | Previous portfolio documentation moved into projects; README now clearly identifies an archive and directs visitors to the website. Profile/case-study files are short redirects. Earlier documentation remains in Git history. |
+| programming2022 | Coursework archive/index | Previous portfolio documentation moved into projects; README now clearly identifies an archive and directs visitors to the website. Profile/case-study files are short redirects. Earlier documentation remains in Git history. The repository is now reversibly archived/read-only. |
 | gitignore | Third-party template fork | Not original portfolio work; preserved untouched with its upstream attribution and licence. |
 
 ## New repositories
