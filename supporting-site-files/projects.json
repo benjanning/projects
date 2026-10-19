@@ -1,0 +1,176 @@
+[
+  {
+    "slug": "car-rental",
+    "title": "Car rental management",
+    "category": "Web application",
+    "repo": "data-representation-project",
+    "stack": [
+      "Python",
+      "Flask",
+      "MySQL",
+      "JavaScript"
+    ],
+    "image": "images/car-inventory.jpg",
+    "alt": "Actual car application showing synthetic vehicle and customer records",
+    "desc": "A browser interface and REST API for managing vehicle and customer records.",
+    "built": "Built a web application that connects a JavaScript interface to a Python API and relational database operations.",
+    "why": "Everyday record management depends on clear workflows and consistent data. This prototype brings the interface, API and storage responsibilities together.",
+    "how": [
+      "View vehicle and customer records in separate tables.",
+      "Create, update and delete records through asynchronous HTTP requests.",
+      "Use MySQL in the original application, or an explicit in-memory mode for a safe local demonstration."
+    ],
+    "demonstrates": "Full-stack development, REST endpoints, relational data access and translating a record-management requirement into a usable interface.",
+    "caption": "Actual Flask application, captured locally with synthetic records after the interface refresh.",
+    "result": "Verified car and customer create, read, update and delete operations using Flask tests. Missing records return 404; invalid record fields are rejected.",
+    "limits": "Academic prototype. The synthetic demo runs in memory and resets on restart. The original MySQL integration was inspected but not run against a live database. Authentication and deployment would need further work for real users.",
+    "technical": "The existing data access classes remain in place for MySQL. An explicit DEMO_MODE selects a separate synthetic store. The homepage filename now matches case-sensitive filesystems; API error handling preserves 404 responses. Database initialization no longer drops an existing database.",
+    "run": "Install requirements.txt. Set DEMO_MODE=1 in your local environment, then run python CarServer.py. Open http://127.0.0.1:5000. Run python -m unittest test_api.py.",
+    "extra": null
+  },
+  {
+    "slug": "machine-learning",
+    "title": "Breast cancer classification",
+    "category": "Machine learning",
+    "repo": "pfda-Project2",
+    "stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "Seaborn"
+    ],
+    "image": "charts/classification-features.png",
+    "alt": "Histogram of mean radius in the public Wisconsin dataset split by diagnosis label",
+    "desc": "Explore a public dataset, compare classifiers and examine the limits of model evaluation.",
+    "built": "Investigated the Wisconsin Breast Cancer dataset in a Python notebook, using exploration, feature selection and several classification methods.",
+    "why": "A useful model starts with understanding the data and evaluating it carefully. This investigation shows the steps between a dataset and an interpretable comparison.",
+    "how": [
+      "Explore class balance, feature relationships and correlations.",
+      "Split the data, scale training features and transform the held-out features.",
+      "Compare logistic regression, decision trees, random forests and additional classifiers, then discuss limitations."
+    ],
+    "demonstrates": "Exploratory analysis, supervised learning, preprocessing, classifier comparison and critical interpretation of results.",
+    "caption": "New presentation of authentic included data: mean-radius distributions by dataset label. This is descriptive analysis, not a diagnostic interface.",
+    "result": "The corrected notebook executed all 42 code cells. Test scaling now uses training-set parameters, while cross-validation performs scaling inside each fold.",
+    "limits": "Educational machine-learning investigation. No clinical use, independent validation or diagnostic capability is claimed. Feature selection remains exploratory; results on this single dataset do not establish real-world performance.",
+    "technical": "Corrected Data/data.csv capitalization and removed deprecated np.bool usage. Added deterministic seeds to tree estimators, corrected test-set scaling and moved cross-validation preprocessing into pipelines. Regenerated notebook outputs are distinguished from historical narrative results.",
+    "run": "Install requirements.txt and open PFDA Project 2.ipynb from the repository root in Jupyter. Run all cells in order.",
+    "extra": null
+  },
+  {
+    "slug": "hotel-booking",
+    "title": "Hotel booking prototype",
+    "category": "Web application",
+    "repo": "cork-city-hotel",
+    "stack": [
+      "Node.js",
+      "Express",
+      "EJS",
+      "MySQL"
+    ],
+    "image": "images/hotel-confirmation.jpg",
+    "alt": "Actual hotel demo confirmation for two synthetic rooms over three nights, total 720 euro",
+    "desc": "From dates and room selection to a server-calculated booking summary.",
+    "built": "Built an Express and EJS hotel-booking prototype, then adapted the original college source into a safe, reproducible local demonstration.",
+    "why": "A multi-step transaction should carry information reliably from one screen to the next. The project explores session state, validation and pricing across a booking journey.",
+    "how": [
+      "Choose check-in and check-out dates.",
+      "Select a synthetic room type and quantity.",
+      "Review a server-calculated total on the confirmation page. No reservation or payment is made."
+    ],
+    "demonstrates": "Server-rendered web development, session handling, input validation and turning a multi-step process into a working application.",
+    "caption": "Actual Express/EJS confirmation screen. Synthetic example: two rooms × €120 × three nights = €720.",
+    "result": "Browser-tested the complete dates → room → demo continuation → confirmation flow. Four automated tests verify date arithmetic, invalid dates, quantities and pricing. Dependency audit reported no known vulnerabilities at the time of review.",
+    "limits": "Academic prototype with synthetic room prices. No live availability, real hotel affiliation, account system or payment integration. MySQL mode was inspected but not integration-tested. Original photographs were excluded because redistribution rights were unclear.",
+    "technical": "Retained the original booking, room-selection and confirmation templates. Added missing-session guards and chronological date validation; totals are calculated server-side. Removed embedded API keys, SQL exports and broken CDN dependencies. The safe default uses synthetic room records and loopback binding.",
+    "run": "Install Node.js. Run npm ci, npm test and npm start. Open http://127.0.0.1:3000. Use sample details only. Optional MySQL mode is documented in the repository.",
+    "extra": null
+  },
+  {
+    "slug": "applied-statistics",
+    "title": "Plant growth & statistics",
+    "category": "Data analysis",
+    "repo": "applied_statistics",
+    "stack": [
+      "Python",
+      "SciPy",
+      "statsmodels",
+      "pandas"
+    ],
+    "image": "charts/plant-growth.png",
+    "alt": "PlantGrowth box plots with every observed data point for control and two treatment groups",
+    "desc": "Compare plant-growth treatments using visual exploration and statistical inference.",
+    "built": "Analysed the PlantGrowth teaching dataset using distribution plots, assumption checks, group comparisons and follow-up tests.",
+    "why": "Differences in averages can be misleading without considering variability. This project shows how visual evidence and statistical testing support a careful comparison.",
+    "how": [
+      "Inspect 30 observations across a control and two treatment groups.",
+      "Explore distributions and check normality and variance assumptions.",
+      "Compare groups with t-tests, ANOVA, Tukey HSD and a non-parametric alternative."
+    ],
+    "demonstrates": "Statistical reasoning, hypothesis testing, visual communication and explaining uncertainty around a decision.",
+    "caption": "New visual presentation of all 30 original observations. Points show actual values; boxes summarize each group.",
+    "result": "The project notebook executed all 18 code cells. The portfolio pairs a new chart of the source data with an original saved coursework plot.",
+    "limits": "Small teaching dataset. Statistical significance alone does not establish practical importance or justify generalizing beyond the experiment. Independence depends on study design and cannot be proven by a plot.",
+    "technical": "The source notebook includes Shapiro-Wilk checks, Q-Q plots, Levene’s test, one-way ANOVA, Tukey HSD and Kruskal-Wallis. Original references and methodology remain available alongside the code.",
+    "run": "Install requirements.txt and Jupyter. Open project.ipynb from the repository root with PlantGrowth.csv alongside it.",
+    "extra": "charts/plant-growth-original.png"
+  },
+  {
+    "slug": "sorting-algorithms",
+    "title": "Sorting algorithms, measured",
+    "category": "Algorithms",
+    "repo": "Sorting-Algorithms-Project",
+    "stack": [
+      "Python",
+      "Algorithms",
+      "Benchmarking",
+      "Matplotlib"
+    ],
+    "image": "charts/sorting-benchmark.png",
+    "alt": "Measured median runtimes of five sorting algorithms across five input sizes on a logarithmic scale",
+    "desc": "Implement five sorting algorithms and compare them using verified, repeatable measurements.",
+    "built": "Implemented bubble, insertion, selection, quick and radix sorting, with visual explanations and benchmarking.",
+    "why": "Two methods can produce the same answer while taking very different amounts of work. Correctness and measurement help make that trade-off visible.",
+    "how": [
+      "Give each algorithm the same five seeded input samples at each size.",
+      "Time the sorting operation, then verify its output against Python’s sorted result.",
+      "Compare median runtimes across five sizes; preserve historical results separately."
+    ],
+    "demonstrates": "Algorithmic thinking, regression testing, reproducible experimentation and interpreting performance evidence.",
+    "caption": "New benchmark from 19 October 2026. Median of five runs per size; logarithmic time axis. Every measured result was checked for correctness.",
+    "result": "Four regression test methods pass, covering empty inputs, duplicates, negative values for comparison sorts, random cases and radix-domain validation. The new benchmark verified 125 individual sorts.",
+    "limits": "Timings depend on Python, machine load and hardware. Only random non-negative integers and sizes up to 1,000 were measured here. Quicksort’s worst-case recursion and other input distributions need separate investigation.",
+    "technical": "benchmark_verified.py uses random.Random(40), time.perf_counter and median timing. Copies are prepared outside the timed region. The new CSV is separate from historical coursework data, whose aggregation needs further review before making performance claims.",
+    "run": "Run python -m unittest test_algorithms.py, then python benchmark_verified.py. Review verified_timings.csv for the new measurements.",
+    "extra": null
+  },
+  {
+    "slug": "iris-analysis",
+    "title": "Iris dataset exploration",
+    "category": "Data analysis",
+    "repo": "pands-project",
+    "stack": [
+      "Python",
+      "pandas",
+      "NumPy",
+      "Seaborn"
+    ],
+    "image": "charts/iris-petals.png",
+    "alt": "Scatter plot of authentic Iris petal length and width with species labels",
+    "desc": "Use summary statistics and visual exploration to reveal patterns in the Iris dataset.",
+    "built": "Created a Python analysis script and notebook to summarize Iris measurements and explore relationships between features and species.",
+    "why": "Before choosing a model, it helps to see how measurements vary and which features reveal useful structure. Clear exploratory analysis makes a dataset easier to understand.",
+    "how": [
+      "Load the included Iris CSV and inspect its structure.",
+      "Calculate descriptive statistics and compare feature distributions.",
+      "Explore relationships with scatter plots, pair plots and correlations."
+    ],
+    "demonstrates": "Data preparation, exploratory analysis, reproducible notebooks and selecting visuals that explain a pattern.",
+    "caption": "New chart of the actual included Iris measurements. Species labels are provided in the dataset, not predictions.",
+    "result": "The corrected notebook executed all 25 code cells. Case-sensitive CSV loading and numeric-only correlations now work in the tested environment.",
+    "limits": "A small, well-known teaching dataset. Visible separation in petal measurements is an exploratory observation, not proof of performance on new datasets. The notebook’s classifier examples are educational extensions.",
+    "technical": "Fixed Iris.csv to iris.csv for case-sensitive filesystems and restricted correlations to numeric columns for current pandas behavior. Seeded and stratified the training split. Original script, figures and sources remain available.",
+    "run": "Install requirements.txt and open Project.ipynb from the repository root, or run analysis.py to produce the original summaries and histograms.",
+    "extra": "charts/iris-original.png"
+  }
+]
