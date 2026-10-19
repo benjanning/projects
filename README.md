@@ -6,7 +6,9 @@ I build tools that connect data and business requirements with useful technical 
 
 ## [Explore the visual portfolio →](https://benjanning.github.io/projects/)
 
-![Working car application with synthetic records](assets/images/car-inventory.jpg)
+![Working hotel application with synthetic records](assets/images/hotel-v2-homepage.jpg)
+
+**[Try the hotel booking demo →](https://benjanning.github.io/cork-city-hotel/)** — interactive static version, sharing the interface and rules with the Express source.
 
 ## Selected work
 
@@ -42,3 +44,7 @@ Original project source and attribution remain in the linked repositories. Sourc
 ## Maintaining the site
 
 Edit the HTML/CSS directly, or regenerate the authored pages using `python supporting-site-files/build-site.py`. The optional chart script takes a parent directory containing local clones of the linked source repositories: `python supporting-site-files/regenerate-charts.py /path/to/repositories`. Run the sorting repository’s benchmark first. Chart regeneration needs the numerical/plotting packages recorded in tested-versions.json. It does not recreate the preserved original coursework PNGs.
+
+## Public repository organisation
+
+[Featured, supporting and historical coursework directory](supporting-site-files/REPOSITORY-DIRECTORY.md) · [V2 verification](supporting-site-files/V2-VALIDATION.md)

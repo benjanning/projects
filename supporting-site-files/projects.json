@@ -22,9 +22,9 @@
     ],
     "demonstrates": "Full-stack development, REST endpoints, relational data access and translating a record-management requirement into a usable interface.",
     "caption": "Actual Flask application, captured locally with synthetic records after the interface refresh.",
-    "result": "Verified car and customer create, read, update and delete operations using Flask tests. Missing records return 404; invalid record fields are rejected.",
+    "result": "Six API/authentication tests pass, including integer-price boundaries, invalid records and missing-record deletion. The actual browser interface was checked with synthetic records.",
     "limits": "Academic prototype. The synthetic demo runs in memory and resets on restart. The original MySQL integration was inspected but not run against a live database. Authentication and deployment would need further work for real users.",
-    "technical": "The existing data access classes remain in place for MySQL. An explicit DEMO_MODE selects a separate synthetic store. The homepage filename now matches case-sensitive filesystems; API error handling preserves 404 responses. Database initialization no longer drops an existing database.",
+    "technical": "The existing data access classes remain in place for MySQL. An explicit DEMO_MODE selects a separate synthetic store. The homepage filename now matches case-sensitive filesystems; API error handling preserves 404 responses. Database initialization no longer drops an existing database. Prices now match the integer MySQL schema, boolean/fractional values are rejected, absent deletes return 404, and visible form labels are associated with inputs.",
     "run": "Install requirements.txt. Set DEMO_MODE=1 in your local environment, then run python CarServer.py. Open http://127.0.0.1:5000. Run python -m unittest test_api.py.",
     "extra": null
   },
@@ -53,9 +53,15 @@
     "caption": "New presentation of authentic included data: mean-radius distributions by dataset label. This is descriptive analysis, not a diagnostic interface.",
     "result": "The corrected notebook executed all 42 code cells. Test scaling now uses training-set parameters, while cross-validation performs scaling inside each fold.",
     "limits": "Educational machine-learning investigation. No clinical use, independent validation or diagnostic capability is claimed. Feature selection remains exploratory; results on this single dataset do not establish real-world performance.",
-    "technical": "Corrected Data/data.csv capitalization and removed deprecated np.bool usage. Added deterministic seeds to tree estimators, corrected test-set scaling and moved cross-validation preprocessing into pipelines. Regenerated notebook outputs are distinguished from historical narrative results.",
+    "technical": "Corrected Data/data.csv capitalization and removed deprecated np.bool usage. Added deterministic seeds to tree estimators, corrected test-set scaling and moved cross-validation preprocessing into pipelines. Regenerated notebook outputs are distinguished from historical narrative results. A separate evaluate.py now retains all 30 features and uses a fixed stratified split, training-only cross-validation and recorded false-negative counts. This is a new refinement, distinct from the historical notebook. Reusing one holdout across model comparisons does not provide an unbiased model-selection estimate.",
     "run": "Install requirements.txt and open PFDA Project 2.ipynb from the repository root in Jupyter. Run all cells in order.",
-    "extra": null
+    "extra": null,
+    "gallery": [
+      [
+        "charts/classification-evaluation.png",
+        "New portfolio evaluation: stratified split, five-fold training cross-validation and a held-out comparison. Error bars show fold standard deviation. This is not clinical validation."
+      ]
+    ]
   },
   {
     "slug": "hotel-booking",
@@ -68,23 +74,42 @@
       "EJS",
       "MySQL"
     ],
-    "image": "images/hotel-confirmation.jpg",
-    "alt": "Actual hotel demo confirmation for two synthetic rooms over three nights, total 720 euro",
-    "desc": "From dates and room selection to a server-calculated booking summary.",
-    "built": "Built an Express and EJS hotel-booking prototype, then adapted the original college source into a safe, reproducible local demonstration.",
+    "image": "images/hotel-v2-homepage.jpg",
+    "alt": "Actual upgraded Express hotel homepage with date selection and illustrative licensed room photography",
+    "desc": "A complete demonstration booking journey, from dates and room cards to guest details and confirmation.",
+    "built": "Evolved my original Express/EJS hotel coursework into a polished application with a complete booking journey and a matching browser-based public demo.",
     "why": "A multi-step transaction should carry information reliably from one screen to the next. The project explores session state, validation and pricing across a booking journey.",
     "how": [
-      "Choose check-in and check-out dates.",
-      "Select a synthetic room type and quantity.",
-      "Review a server-calculated total on the confirmation page. No reservation or payment is made."
+      "Choose dates and a guest count, then compare three example room types.",
+      "Select room quantity and enter synthetic guest details; review the itemised total.",
+      "Confirm the demonstration and receive a clearly labelled demo reference. No real reservation or payment is made."
     ],
     "demonstrates": "Server-rendered web development, session handling, input validation and turning a multi-step process into a working application.",
-    "caption": "Actual Express/EJS confirmation screen. Synthetic example: two rooms × €120 × three nights = €720.",
-    "result": "Browser-tested the complete dates → room → demo continuation → confirmation flow. Four automated tests verify date arithmetic, invalid dates, quantities and pricing. Dependency audit reported no known vulnerabilities at the time of review.",
-    "limits": "Academic prototype with synthetic room prices. No live availability, real hotel affiliation, account system or payment integration. MySQL mode was inspected but not integration-tested. Original photographs were excluded because redistribution rights were unclear.",
-    "technical": "Retained the original booking, room-selection and confirmation templates. Added missing-session guards and chronological date validation; totals are calculated server-side. Removed embedded API keys, SQL exports and broken CDN dependencies. The safe default uses synthetic room records and loopback binding.",
-    "run": "Install Node.js. Run npm ci, npm test and npm start. Open http://127.0.0.1:3000. Use sample details only. Optional MySQL mode is documented in the repository.",
-    "extra": null
+    "caption": "Actual local Express/EJS homepage. Room photography is licensed and illustrative; the fictional property, room catalog and prices are synthetic.",
+    "result": "15 automated hotel tests pass. Browser-tested the full Express journey and the matching static demo. Two €120 rooms over three nights total €720. The optional live MySQL test is skipped because no Docker/MySQL runtime is available.",
+    "limits": "The public GitHub Pages demo runs in the browser, sharing the interface and rules with the server source. It does not run Express/MySQL. Neither mode creates real inventory, reservations, accounts or payments. The isolated MySQL setup is supplied but its live connection is not verified.",
+    "technical": "A shared EJS shell, browser journey and pure booking-rules module power both modes. Express independently validates selections and guest details, recalculates prices from its catalog, protects session writes with CSRF tokens and handles duplicate confirmations. Optional MySQL uses a pooled synthetic catalog with safe errors. Original templates remain in views/legacy and Git history.",
+    "run": "Run npm ci, npm test and npm start for Express at http://127.0.0.1:3000. No database is needed by default. npm run build:demo generates the public static version. An optional isolated MySQL Docker setup and opt-in integration test are documented separately.",
+    "extra": null,
+    "demo": "https://benjanning.github.io/cork-city-hotel/",
+    "gallery": [
+      [
+        "images/hotel-v2-rooms.jpg",
+        "Compare synthetic room types, capacity, quantity and example prices."
+      ],
+      [
+        "images/hotel-v2-guest-form.jpg",
+        "Guest details and an itemised example total."
+      ],
+      [
+        "images/hotel-v2-review.jpg",
+        "Review synthetic details before confirming the demo."
+      ],
+      [
+        "images/hotel-v2-confirmation.jpg",
+        "A genuine confirmation screen, explicitly labelled as a demonstration."
+      ]
+    ]
   },
   {
     "slug": "applied-statistics",
