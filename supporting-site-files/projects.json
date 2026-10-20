@@ -328,22 +328,51 @@
       "NumPy",
       "Seaborn"
     ],
-    "image": "charts/iris-petals.png",
-    "alt": "Scatter plot of authentic Iris petal length and width with species labels",
-    "desc": "Use summary statistics and visual exploration to reveal patterns in the Iris dataset.",
-    "built": "Created a Python analysis script and notebook to summarize Iris measurements and explore relationships between features and species.",
+    "image": "releases/iris-analysis/2a1cfdf6a3943458b1ac335ed078f5b8143b425b/relationships.png",
+    "alt": "Observed petal and sepal relationships for fifty flowers from each of three Iris species",
+    "desc": "Explore three Iris species through authentic measurements, clear distributions and reproducible descriptive analysis.",
+    "built": "Preserved the original Iris coursework and added a portable, tested visual investigation of all 150 supplied observations.",
     "why": "Before choosing a model, it helps to see how measurements vary and which features reveal useful structure. Clear exploratory analysis makes a dataset easier to understand.",
     "how": [
-      "Load the included Iris CSV and inspect its structure.",
-      "Calculate descriptive statistics and compare feature distributions.",
-      "Explore relationships with scatter plots, pair plots and correlations."
+      "Compare petal and sepal relationships using the observed species labels.",
+      "Inspect all four feature distributions, with every measurement visible and units in centimetres.",
+      "Compare species mean profiles and observed spread, then inspect the saved summaries and dataset provenance."
     ],
     "demonstrates": "Data preparation, exploratory analysis, reproducible notebooks and selecting visuals that explain a pattern.",
-    "caption": "New chart of the actual included Iris measurements. Species labels are provided in the dataset, not predictions.",
-    "result": "The corrected notebook executed all 25 code cells. Case-sensitive CSV loading and numeric-only correlations now work in the tested environment.",
-    "limits": "A small, well-known teaching dataset. Visible separation in petal measurements is an exploratory observation, not proof of performance on new datasets. The notebook’s classifier examples are educational extensions.",
-    "technical": "Fixed Iris.csv to iris.csv for case-sensitive filesystems and restricted correlations to numeric columns for current pandas behavior. Seeded and stratified the training split. Original script, figures and sources remain available.",
-    "run": "Install requirements.txt and open Project.ipynb from the repository root, or run analysis.py to produce the original summaries and histograms.",
-    "extra": "charts/iris-original.png"
+    "caption": "All 150 supplied observations, fifty per species. The petal cluster for Setosa is distinct in this sample; the other species overlap. These colours represent observed labels, not predictions.",
+    "result": "150 supplied observations, 50 per species. Mean petal lengths: Setosa 1.462 cm, Versicolor 4.260 cm, Virginica 5.552 cm. Setosa forms a distinct petal cluster in these observations; Versicolor and Virginica overlap. All four measurements and all species labels are observed data, not model predictions. Repeated measurement rows are retained; this descriptive teaching sample does not establish general classification performance.",
+    "limits": "This is descriptive exploration of a small, familiar teaching dataset. Separation in these observations is not independent validation of a classifier or evidence of general performance. Pooled correlations mix species and do not establish causation. Identical measurement rows are retained because equality alone does not prove duplicate sampling. The supplied CSV is preserved; historical Iris variants differ in two documented observations.",
+    "technical": "A portable script validates the four positive finite measurement columns and three groups of fifty, records the input SHA-256 and software versions, and exports twelve feature/species summaries plus pooled correlations. Three tests reconcile summaries with independent raw-row calculations, validate provenance/counts and reproduce all numeric outputs. Standard-deviation bars describe observed variation, not uncertainty of the mean. Original analysis.py and Project.ipynb remain intact.",
+    "run": "Install requirements.txt, run python explore_iris.py and python -m unittest discover -p \"test_*.py\" -v. Inspect results/species-summary.csv, results/analysis.json and the preserved original notebook.",
+    "extra": "",
+    "gallery": [
+      [
+        "releases/iris-analysis/2a1cfdf6a3943458b1ac335ed078f5b8143b425b/distributions.png",
+        "Every measurement, with median/quartile boxes and clearly labelled centimetres."
+      ],
+      [
+        "releases/iris-analysis/2a1cfdf6a3943458b1ac335ed078f5b8143b425b/profiles.png",
+        "Species means ±1 sample standard deviation; these are not confidence intervals."
+      ]
+    ],
+    "source_revision": "2a1cfdf6a3943458b1ac335ed078f5b8143b425b",
+    "verification_run": 39430617572,
+    "provenance": [
+      {
+        "name": "releases/iris-analysis/2a1cfdf6a3943458b1ac335ed078f5b8143b425b/relationships.png",
+        "sha256": "7c279b893bb031c15324b01e6ce5d12c7e4b87100d4fa3bdba67a52791a60807",
+        "description": "Actual supplied petal and sepal measurements coloured by observed species labels, not predictions."
+      },
+      {
+        "name": "releases/iris-analysis/2a1cfdf6a3943458b1ac335ed078f5b8143b425b/distributions.png",
+        "sha256": "7e37abca1e61b73be62f0edb9087aaae3633c357dce6a0c5b1a7aa58a1e33428",
+        "description": "All supplied measurements with sample quartiles. Seed 40 changes horizontal visual jitter only."
+      },
+      {
+        "name": "releases/iris-analysis/2a1cfdf6a3943458b1ac335ed078f5b8143b425b/profiles.png",
+        "sha256": "77db3da56f106a6ba9c592a9a01a3752ffe39f7dada4435f8430349a4d2a8b8e",
+        "description": "Species sample means with plus/minus one observed sample standard deviation; not confidence intervals."
+      }
+    ]
   }
 ]
