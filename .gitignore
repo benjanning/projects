@@ -7,4 +7,7 @@ __pycache__/
 dist/
 sync-result.json
 sync-pr-body.md
+verification/
+test-results/
+playwright-report/
 __pycache__/

@@ -5,6 +5,18 @@ projects=json.loads((r/'supporting-site-files/projects.json').read_text(encoding
 E=html.escape
 car=next(p for p in projects if p['slug']=='car-rental')
 
+# Stable public previews let the GitHub profile follow approved visual releases.
+featured=r/'assets/featured';featured.mkdir(exist_ok=True)
+for p in projects:
+ source=r/'assets'/p['image']
+ shutil.copy2(source,featured/(p['slug']+source.suffix))
+
+table=['| Project | What to explore | Technologies |','| --- | --- | --- |']
+for p in projects:
+ table.append('| ['+p['title']+'](https://benjanning.github.io/projects/projects/'+p['slug']+'/) · [Source](https://github.com/benjanning/'+p['repo']+') | '+p['desc']+' | '+', '.join(p['stack'])+' |')
+template=(r/'supporting-site-files/readme-template.md').read_text(encoding='utf-8')
+(r/'README.md').write_text(template.replace('{{PROJECT_TABLE}}','\n'.join(table)),encoding='utf-8')
+
 def header(base):return f'''<a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="{base}"><span class="monogram" aria-hidden="true">bj.</span><span>Ben Janning<small>Data · Software · Business</small></span></a><nav aria-label="Main navigation"><a href="{base}#projects">Projects</a><a href="{base}#about">About</a><a href="{base}#skills">Skills</a><a href="https://github.com/benjanning">GitHub <span aria-hidden="true">↗</span></a></nav></header>'''
 def footer(base):return f'''<footer><a class="footer-name" href="{base}">Ben Janning<span>Useful technology. Clearly explained.</span></a><div><a href="https://github.com/benjanning">Explore my GitHub ↗</a><small>Selected academic projects · Built with care</small></div></footer>'''
 def page(title,desc,body,base='./',slug='',project=None):

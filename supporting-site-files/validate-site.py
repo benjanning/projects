@@ -36,9 +36,12 @@ def validate(root=ROOT):
     for p in projects:
         file=root/'projects'/p['slug']/'index.html';doc=docs[file];url='https://benjanning.github.io/projects/projects/'+p['slug']+'/'
         expected={'og:title':p['title']+' | Ben Janning','og:description':p['desc'],'og:image':'https://benjanning.github.io/projects/assets/'+p['image'],'og:image:alt':p['alt'],'twitter:card':'summary_large_image'}
+        expected.update({'description':p['desc'],'og:url':url,'twitter:title':expected['og:title'],'twitter:description':p['desc'],'twitter:image':expected['og:image'],'twitter:image:alt':p['alt']})
         if doc.canonical!=url:errors.append('Wrong canonical '+p['slug'])
         for key,value in expected.items():
             if doc.meta.get(key)!=value:errors.append('Wrong metadata '+p['slug']+' '+key)
+        source=root/'assets'/p['image'];alias=root/'assets/featured'/(p['slug']+source.suffix)
+        if not alias.exists() or alias.read_bytes()!=source.read_bytes():errors.append('Stale profile preview '+p['slug'])
         if p.get('source_revision'):
             if not re.fullmatch('[0-9a-f]{40}',p['source_revision']):errors.append('Invalid source revision')
             for a in p.get('provenance',[]):

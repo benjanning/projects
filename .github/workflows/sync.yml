@@ -43,7 +43,7 @@ jobs:
       - name: Create or update a reviewable portfolio PR
         shell: bash
         run: |
-          git add supporting-site-files/projects.json supporting-site-files/source-lock.json assets index.html projects 404.html
+          git add supporting-site-files/projects.json supporting-site-files/source-lock.json assets index.html projects 404.html README.md
           if git diff --cached --quiet; then
             echo 'No newly verified source releases to publish.' >> "$GITHUB_STEP_SUMMARY"
             exit 0
