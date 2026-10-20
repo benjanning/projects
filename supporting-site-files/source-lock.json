@@ -132,5 +132,31 @@
         "provenance": "Actual 390px browser screenshot with a dense 20-value case; no fabricated interface or runtime claim."
       }
     ]
+  },
+  "iris-analysis": {
+    "repository": "benjanning/pands-project",
+    "source_revision": "2a1cfdf6a3943458b1ac335ed078f5b8143b425b",
+    "export_revision": "35d2c1a55f715fbc3006170f6b028f1b434064c9",
+    "verification_run": 39430617572,
+    "assets": [
+      {
+        "name": "relationships.png",
+        "sha256": "7c279b893bb031c15324b01e6ce5d12c7e4b87100d4fa3bdba67a52791a60807",
+        "bytes": 113124,
+        "provenance": "Actual supplied petal and sepal measurements coloured by observed species labels, not predictions."
+      },
+      {
+        "name": "distributions.png",
+        "sha256": "7e37abca1e61b73be62f0edb9087aaae3633c357dce6a0c5b1a7aa58a1e33428",
+        "bytes": 189415,
+        "provenance": "All supplied measurements with sample quartiles. Seed 40 changes horizontal visual jitter only."
+      },
+      {
+        "name": "profiles.png",
+        "sha256": "77db3da56f106a6ba9c592a9a01a3752ffe39f7dada4435f8430349a4d2a8b8e",
+        "bytes": 68519,
+        "provenance": "Species sample means with plus/minus one observed sample standard deviation; not confidence intervals."
+      }
+    ]
   }
 }
