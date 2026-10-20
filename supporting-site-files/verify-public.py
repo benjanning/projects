@@ -9,10 +9,16 @@ def fetch(url):
 def verify():
     base='https://benjanning.github.io/projects/';expected=os.environ['GITHUB_SHA'];receipt=json.loads(fetch(base+'release.json?revision='+expected))
     if receipt['portfolio_revision']!=expected:raise ValueError('Public deployment receipt is not the expected revision')
+    locks=json.loads((root/'supporting-site-files/source-lock.json').read_text(encoding='utf-8'))
+    if receipt['projects']!=locks:raise ValueError('Public source receipt differs from the approved build')
     projects=json.loads((root/'supporting-site-files/projects.json').read_text(encoding='utf-8'))
     for p in projects:
         doc=mod.Document(fetch(base+'projects/'+p['slug']+'/?revision='+expected).decode('utf-8'))
-        if doc.meta.get('og:image')!=base+'assets/'+p['image']:raise ValueError('Public metadata mismatch: '+p['slug'])
+        expected_meta={'description':p['desc'],'og:title':p['title']+' | Ben Janning','og:description':p['desc'],'og:image':base+'assets/'+p['image'],'og:image:alt':p['alt'],'twitter:card':'summary_large_image'}
+        expected_meta.update({'og:url':base+'projects/'+p['slug']+'/','twitter:title':expected_meta['og:title'],'twitter:description':p['desc'],'twitter:image':expected_meta['og:image'],'twitter:image:alt':p['alt']})
+        if doc.canonical!=base+'projects/'+p['slug']+'/':raise ValueError('Public canonical mismatch')
+        for key,value in expected_meta.items():
+            if doc.meta.get(key)!=value:raise ValueError('Public metadata mismatch: '+p['slug']+' '+key)
         for a in p.get('provenance',[]):
             if hashlib.sha256(fetch(base+'assets/'+a['name'])).hexdigest()!=a['sha256']:raise ValueError('Public asset mismatch')
         fetch('https://github.com/benjanning/'+p['repo'])

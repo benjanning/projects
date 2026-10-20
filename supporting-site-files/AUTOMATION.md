@@ -13,9 +13,13 @@ The portfolio keeps its established URLs and design. `projects.json` is the gene
 
 Source metadata, screenshots and charts are a versioned package. A metadata-only update still runs its required verification/capture commands. The displayed source receipt links to the exact commit and successful run, rather than pretending an older screenshot represents an untested newer interface. Figures based on historical measurements retain their measurement provenance and limits.
 
+The generator also copies the current verified lead images to stable `assets/featured/<slug>.<extension>` URLs for the GitHub profile. Validation checks byte equality against the approved versioned assets. Profile image caches can take time to refresh; case-study source receipts remain authoritative. If a lead image's format changes, update that profile URL's extension as part of the review.
+
 ## Review and failure behaviour
 
 The repository setting allowing Actions-created PRs is required once for `benjanning/projects`. Default workflow token permissions stay read-only; only the sync job requests contents/PR write access. Source export jobs can write only to their own repository. This setting was enabled with the owner's approval. The workflows contain no automatic review or merge step.
+
+GitHub may hold a bot-created PR's validation run for reviewer approval. Open its Actions run and approve the trusted workflow before the approval window expires, then wait for the build check and review the changed source receipts and visuals before merging. An expired approval is not a failed source computation; approve a fresh validation run rather than bypassing the review. This approval requirement remains enabled. The daily sync creates a review proposal, so it does not publish a source change without a reviewer.
 
 Invalid metadata or altered assets fail before a review branch is pushed. Source verification failure prevents a new export. Generation or validation failure prevents deployment, leaving the last deployed site available. Public verification failure marks the release unsuccessful and requires investigation; it is not silently described as a successful sync. The public receipt and Actions history identify the last observed deployed revision. Existing source history and prior asset versions remain recoverable.
 

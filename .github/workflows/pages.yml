@@ -25,6 +25,12 @@ jobs:
       - run: python supporting-site-files/build-site.py
       - run: python supporting-site-files/validate-site.py
       - run: python supporting-site-files/stage-site.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser
       - uses: actions/configure-pages@v5
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
       - uses: actions/upload-pages-artifact@v3
@@ -53,3 +59,18 @@ jobs:
         with:
           python-version: '3.12'
       - run: python supporting-site-files/verify-public.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Inspect all public pages at desktop and mobile widths
+        env:
+          PORTFOLIO_BASE: https://benjanning.github.io/projects/
+        run: npm run test:browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: portfolio-public-browser-evidence
+          path: verification
+          retention-days: 14
