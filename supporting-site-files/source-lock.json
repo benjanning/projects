@@ -48,5 +48,31 @@
         "provenance": "Genuine shared-frontend browser capture after successful CRUD/reset/error checks, from this source revision. Synthetic records; original CSS/SVG visuals."
       }
     ]
+  },
+  "machine-learning": {
+    "repository": "benjanning/pfda-Project2",
+    "source_revision": "e8240c77b22622690ff3190e04a2330a72ac1ffb",
+    "export_revision": "3d102b884d0e5ad390631d7b680a0ab6bf764dcb",
+    "verification_run": 39428021220,
+    "assets": [
+      {
+        "name": "comparison.png",
+        "sha256": "030226df541eb82dddc0e459c24ad90ff1eb7a3d771f780f5463d51dafea5e24",
+        "bytes": 86419,
+        "provenance": "Measured balanced accuracy from saved model-comparison.csv. Training fold SD is not a confidence interval. Reused holdout is exploratory."
+      },
+      {
+        "name": "confusion.png",
+        "sha256": "cea151ba1e7ab93010581e162b96ed07c7e2c795209030f6de01ed6bdb7db6e8",
+        "bytes": 134975,
+        "provenance": "Genuine confusion counts reconstructed from saved predictions for the same 171 held-out examples; lower-left cells show false negatives."
+      },
+      {
+        "name": "features.png",
+        "sha256": "199c6190b817af482e6acec1fa8e8b989a9a521462dc1c925a90ff742e521879",
+        "bytes": 97795,
+        "provenance": "Descriptive histograms from the complete public Wisconsin dataset. Shared bins; no feature selection or clinical claim."
+      }
+    ]
   }
 }

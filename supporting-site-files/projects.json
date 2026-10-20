@@ -98,28 +98,51 @@
       "scikit-learn",
       "Seaborn"
     ],
-    "image": "charts/classification-features.png",
-    "alt": "Histogram of mean radius in the public Wisconsin dataset split by diagnosis label",
-    "desc": "Explore a public dataset, compare classifiers and examine the limits of model evaluation.",
-    "built": "Investigated the Wisconsin Breast Cancer dataset in a Python notebook, using exploration, feature selection and several classification methods.",
+    "image": "releases/machine-learning/e8240c77b22622690ff3190e04a2330a72ac1ffb/comparison.png",
+    "alt": "Measured classifier comparison with training-fold variability and explicit false-negative counts",
+    "desc": "Compare three classifiers, inspect their mistakes and understand the limits of a single public dataset.",
+    "built": "Refined the original educational investigation into an auditable comparison, with saved predictions, confusion matrices and a reproducible evaluation trail.",
     "why": "A useful model starts with understanding the data and evaluating it carefully. This investigation shows the steps between a dataset and an interpretable comparison.",
     "how": [
-      "Explore class balance, feature relationships and correlations.",
-      "Split the data, scale training features and transform the held-out features.",
-      "Compare logistic regression, decision trees, random forests and additional classifiers, then discuss limitations."
+      "Inspect the 569 source observations and retain all 30 numeric features, excluding identifiers and labels.",
+      "Use a deterministic stratified training/holdout split, with preprocessing fitted inside training-only cross-validation.",
+      "Compare errors on the same reused holdout, reconcile saved predictions with metrics and reproduce the figures."
     ],
     "demonstrates": "Exploratory analysis, supervised learning, preprocessing, classifier comparison and critical interpretation of results.",
-    "caption": "New presentation of authentic included data: mean-radius distributions by dataset label. This is descriptive analysis, not a diagnostic interface.",
-    "result": "The corrected notebook executed all 42 code cells. Test scaling now uses training-set parameters, while cross-validation performs scaling inside each fold.",
-    "limits": "Educational machine-learning investigation. No clinical use, independent validation or diagnostic capability is claimed. Feature selection remains exploratory; results on this single dataset do not establish real-world performance.",
-    "technical": "Corrected Data/data.csv capitalization and removed deprecated np.bool usage. Added deterministic seeds to tree estimators, corrected test-set scaling and moved cross-validation preprocessing into pipelines. Regenerated notebook outputs are distinguished from historical narrative results. A separate evaluate.py now retains all 30 features and uses a fixed stratified split, training-only cross-validation and recorded false-negative counts. This is a new refinement, distinct from the historical notebook. Reusing one holdout across model comparisons does not provide an unbiased model-selection estimate.",
-    "run": "Install requirements.txt and open PFDA Project 2.ipynb from the repository root in Jupyter. Run all cells in order.",
-    "extra": null,
+    "caption": "A reproducible three-model comparison using all 30 source features. Green bars show training-only cross-validation; brown points show the reused exploratory holdout.",
+    "result": "All 30 features; 398 training examples; 171 examples in a repeatedly reused exploratory holdout. False negatives among 64 malignant-labelled holdout examples: Logistic regression 7, Decision tree 10, Random forest 6. Training-only five-fold cross-validation keeps preprocessing inside each fold. Saved predictions reconcile with the metrics and confusion matrices; repeated runs reproduce the same result files. No independent or clinical validation.",
+    "limits": "This is educational analysis of a public teaching dataset, not a diagnostic system. The holdout has been reused across models and portfolio iterations, so it is exploratory rather than an untouched final test. No independent cohort, clinical validation, calibration study or causal interpretation is claimed. False negatives are shown explicitly.",
+    "technical": "Seed 40; stratified 70/30 split; five stratified training-only CV folds; all 30 features. Logistic regression uses a StandardScaler pipeline; decision tree and random forest use fixed seeds. Saved prediction rows, labelled confusion counts, feature names, partition indices, dependency versions and dataset SHA-256 make the measured outputs auditable. Regression tests reconcile metrics and matrices and reproduce output files byte-for-byte.",
+    "run": "Install requirements.txt, run python evaluate.py, python -m unittest discover -p \"test_*.py\" -v and python plot_portfolio.py. The original notebook remains available separately.",
+    "extra": "",
     "gallery": [
       [
-        "charts/classification-evaluation.png",
-        "New portfolio evaluation: stratified split, five-fold training cross-validation and a held-out comparison. Error bars show fold standard deviation. This is not clinical validation."
+        "releases/machine-learning/e8240c77b22622690ff3190e04a2330a72ac1ffb/confusion.png",
+        "The same held-out examples and labelled false-negative counts for all three models."
+      ],
+      [
+        "releases/machine-learning/e8240c77b22622690ff3190e04a2330a72ac1ffb/features.png",
+        "Descriptive feature distributions and source class counts; these are not independent performance evidence."
       ]
+    ],
+    "source_revision": "e8240c77b22622690ff3190e04a2330a72ac1ffb",
+    "verification_run": 39428021220,
+    "provenance": [
+      {
+        "name": "releases/machine-learning/e8240c77b22622690ff3190e04a2330a72ac1ffb/comparison.png",
+        "sha256": "030226df541eb82dddc0e459c24ad90ff1eb7a3d771f780f5463d51dafea5e24",
+        "description": "Measured balanced accuracy from saved model-comparison.csv. Training fold SD is not a confidence interval. Reused holdout is exploratory."
+      },
+      {
+        "name": "releases/machine-learning/e8240c77b22622690ff3190e04a2330a72ac1ffb/confusion.png",
+        "sha256": "cea151ba1e7ab93010581e162b96ed07c7e2c795209030f6de01ed6bdb7db6e8",
+        "description": "Genuine confusion counts reconstructed from saved predictions for the same 171 held-out examples; lower-left cells show false negatives."
+      },
+      {
+        "name": "releases/machine-learning/e8240c77b22622690ff3190e04a2330a72ac1ffb/features.png",
+        "sha256": "199c6190b817af482e6acec1fa8e8b989a9a521462dc1c925a90ff742e521879",
+        "description": "Descriptive histograms from the complete public Wisconsin dataset. Shared bins; no feature selection or clinical claim."
+      }
     ]
   },
   {
