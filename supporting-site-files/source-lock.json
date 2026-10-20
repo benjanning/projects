@@ -74,5 +74,31 @@
         "provenance": "Descriptive histograms from the complete public Wisconsin dataset. Shared bins; no feature selection or clinical claim."
       }
     ]
+  },
+  "applied-statistics": {
+    "repository": "benjanning/applied_statistics",
+    "source_revision": "fc9f72275326e0ab2a6ba03a0aba27574ddd0c26",
+    "export_revision": "447dd6a4e42450afcd29745edafac1238dbb54e9",
+    "verification_run": 39429112983,
+    "assets": [
+      {
+        "name": "observations.png",
+        "sha256": "a13cf58c040aeaa7ef1a83483a4bb03b170b953698c74e41010e2480f82ce784",
+        "bytes": 71633,
+        "provenance": "All 30 authentic PlantGrowth dried-weight observations; seeded visual jitter only. Boxes show median and quartiles."
+      },
+      {
+        "name": "means.png",
+        "sha256": "ee6f8390432bef27724bf6568c0213700059fa8a3a1d8a1921813d11dfb33df2",
+        "bytes": 59313,
+        "provenance": "Group sample means and pointwise 95% t intervals computed from the source CSV. These are not simultaneous pairwise intervals."
+      },
+      {
+        "name": "differences.png",
+        "sha256": "0f47c3d47f0ec70a606bdd8c1b8ce8cfa150a26ab7f6cbb14b2902a89a8e1fdc",
+        "bytes": 78868,
+        "provenance": "Three two-sided Welch mean differences with three-comparison Bonferroni-adjusted familywise 95% approximate intervals and adjusted p-values."
+      }
+    ]
   }
 }
