@@ -3,3 +3,8 @@ node_modules/
 __pycache__/
 .DS_Store
 .env
+
+dist/
+sync-result.json
+sync-pr-body.md
+__pycache__/
