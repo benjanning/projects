@@ -158,5 +158,55 @@
         "provenance": "Species sample means with plus/minus one observed sample standard deviation; not confidence intervals."
       }
     ]
+  },
+  "hotel-booking": {
+    "repository": "benjanning/cork-city-hotel",
+    "source_revision": "4214b29b3e705cf9da130fd305e9d29dd5d7cf46",
+    "export_revision": "93ba0248b74387e2b8d7185f43300564738c0247",
+    "verification_run": 39431496033,
+    "assets": [
+      {
+        "name": "homepage.jpg",
+        "sha256": "482556ede17afcc5b9409bdfcbf96e7f2aa7b12112148cd586b3eb62966993b1",
+        "bytes": 159227,
+        "provenance": "Actual shared-frontend static browser capture after successful Express/static journey, validation, reload, reset and mobile checks. Future dates calculated at capture time; synthetic records; licensed illustrative photograph credited in public/credits.html."
+      },
+      {
+        "name": "rooms.jpg",
+        "sha256": "8d2ea1fdc1ec3834f08dda0a7ce82f18c636fec1d1e933d1e642282be35417cd",
+        "bytes": 89867,
+        "provenance": "Actual shared-frontend static browser capture after successful Express/static journey, validation, reload, reset and mobile checks. Future dates calculated at capture time; synthetic records; licensed illustrative photograph credited in public/credits.html."
+      },
+      {
+        "name": "guest-form.jpg",
+        "sha256": "fe4ed899825d5c0ea80aa6ff5c57c0e569c0d5d06d2a3a8821ba125a0d293e97",
+        "bytes": 75342,
+        "provenance": "Actual shared-frontend static browser capture after successful Express/static journey, validation, reload, reset and mobile checks. Future dates calculated at capture time; synthetic records; licensed illustrative photograph credited in public/credits.html."
+      },
+      {
+        "name": "review.jpg",
+        "sha256": "756ffb005c945bbf93679a39342fcb32ed1d1bd6124e909678a2bdc32432452e",
+        "bytes": 74132,
+        "provenance": "Actual shared-frontend static browser capture after successful Express/static journey, validation, reload, reset and mobile checks. Future dates calculated at capture time; synthetic records; licensed illustrative photograph credited in public/credits.html."
+      },
+      {
+        "name": "confirmation.jpg",
+        "sha256": "11d9529d684e5a3bbe67b2e5e59d6c3fff042d6bdffd2cea09945625393a5115",
+        "bytes": 86343,
+        "provenance": "Actual shared-frontend static browser capture after successful Express/static journey, validation, reload, reset and mobile checks. Future dates calculated at capture time; synthetic records; licensed illustrative photograph credited in public/credits.html."
+      },
+      {
+        "name": "mobile-confirmation.jpg",
+        "sha256": "54d13323e8dd7c8ccb4304b3a791aea1856edaff1c8f831aa9e832f100650c51",
+        "bytes": 66655,
+        "provenance": "Actual shared-frontend static browser capture after successful Express/static journey, validation, reload, reset and mobile checks. Future dates calculated at capture time; synthetic records; licensed illustrative photograph credited in public/credits.html."
+      },
+      {
+        "name": "mobile-homepage.jpg",
+        "sha256": "7cd7fa5cee9d338b362b06bc2b5b0c2aa96efe956f9157a4b11973f596da9e7e",
+        "bytes": 74460,
+        "provenance": "Actual shared-frontend static browser capture after successful Express/static journey, validation, reload, reset and mobile checks. Future dates calculated at capture time; synthetic records; licensed illustrative photograph credited in public/credits.html."
+      }
+    ]
   }
 }
