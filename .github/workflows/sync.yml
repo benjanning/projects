@@ -1,0 +1,59 @@
+name: Review public project releases
+on:
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: portfolio-source-sync
+  cancel-in-progress: false
+jobs:
+  review-update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Prepare a normal review branch, preserving its history
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if git ls-remote --exit-code --heads origin automation/portfolio-sync >/dev/null; then
+            git fetch origin automation/portfolio-sync:refs/remotes/origin/automation/portfolio-sync
+            git switch -c automation/portfolio-sync origin/automation/portfolio-sync
+            git merge origin/main --no-edit
+          else
+            git switch -c automation/portfolio-sync
+          fi
+      - name: Check only the six registered public sources
+        run: python supporting-site-files/sync-projects.py
+      - run: python -m unittest discover -s supporting-site-files/tests -v
+      - run: python supporting-site-files/build-site.py
+      - run: python supporting-site-files/validate-site.py
+      - name: Create or update a reviewable portfolio PR
+        shell: bash
+        run: |
+          git add supporting-site-files/projects.json supporting-site-files/source-lock.json assets index.html projects 404.html
+          if git diff --cached --quiet; then
+            echo 'No newly verified source releases to publish.' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git commit -m 'Synchronise verified public project releases'
+          git push origin HEAD:automation/portfolio-sync
+          python supporting-site-files/write-sync-pr.py
+          current=$(gh pr list --repo "$GITHUB_REPOSITORY" --head automation/portfolio-sync --state open --json number --jq '.[0].number // empty')
+          if [ -n "$current" ]; then
+            gh pr edit "$current" --repo "$GITHUB_REPOSITORY" --body-file sync-pr-body.md
+          else
+            gh pr create --repo "$GITHUB_REPOSITORY" --base main --head automation/portfolio-sync --title 'Refresh verified project releases' --body-file sync-pr-body.md
+          fi
