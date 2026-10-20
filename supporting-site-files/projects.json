@@ -301,7 +301,7 @@
       "Benchmarking",
       "Matplotlib"
     ],
-    "image": "releases/sorting-algorithms/5a3841b1714bdf4f94321e2737a23d632b5479cd/benchmark.png",
+    "image": "releases/sorting-algorithms/df3eafa20d2dbd2ef1aa1259fd41d96c42a36cf8/benchmark.png",
     "alt": "Measured runtimes and observed interquartile ranges of five Python sorting implementations",
     "desc": "Measure five sorting implementations, then step through the work behind three of them in a simple interactive explorer.",
     "built": "Preserved five original Python algorithms and their confirmed tests, added traceable raw benchmark measurements and built a small browser explorer that shows real algorithm operations.",
@@ -320,37 +320,37 @@
     "extra": "",
     "gallery": [
       [
-        "releases/sorting-algorithms/5a3841b1714bdf4f94321e2737a23d632b5479cd/comparison.png",
+        "releases/sorting-algorithms/df3eafa20d2dbd2ef1aa1259fd41d96c42a36cf8/comparison.png",
         "The same measurements at 1,000 values, shown on a linear scale."
       ],
       [
-        "releases/sorting-algorithms/5a3841b1714bdf4f94321e2737a23d632b5479cd/explorer.jpg",
+        "releases/sorting-algorithms/df3eafa20d2dbd2ef1aa1259fd41d96c42a36cf8/explorer.jpg",
         "The real sorting explorer: step through comparisons and swaps. Playback speed is not a benchmark."
       ]
     ],
     "demo": "https://benjanning.github.io/Sorting-Algorithms-Project/",
     "demo_label": "Try sorting explorer",
     "demo_disclosure": "Interactive browser explanation of three sorting approaches. Playback is illustrative; measured Python benchmarks are presented separately.",
-    "source_revision": "5a3841b1714bdf4f94321e2737a23d632b5479cd",
-    "verification_run": 39429978976,
+    "source_revision": "df3eafa20d2dbd2ef1aa1259fd41d96c42a36cf8",
+    "verification_run": 39432877151,
     "provenance": [
       {
-        "name": "releases/sorting-algorithms/5a3841b1714bdf4f94321e2737a23d632b5479cd/benchmark.png",
+        "name": "releases/sorting-algorithms/df3eafa20d2dbd2ef1aa1259fd41d96c42a36cf8/benchmark.png",
         "sha256": "1fdaf5150cbfea253f474660d06ea597f231800fbdd72bed8931f809437693ba",
         "description": "Genuine measured Python medians and observed IQR from saved raw observations; exact algorithm hashes and measurement environment are retained."
       },
       {
-        "name": "releases/sorting-algorithms/5a3841b1714bdf4f94321e2737a23d632b5479cd/comparison.png",
+        "name": "releases/sorting-algorithms/df3eafa20d2dbd2ef1aa1259fd41d96c42a36cf8/comparison.png",
         "sha256": "6a0a032fe8169c1a5e76151195f2f7ac3acadbb2ea08dec93058dcd369d4b6d7",
         "description": "The same saved observations at input size 1000 on a linear axis. This is an environment/workload-specific comparison, not a universal ranking."
       },
       {
-        "name": "releases/sorting-algorithms/5a3841b1714bdf4f94321e2737a23d632b5479cd/explorer.jpg",
+        "name": "releases/sorting-algorithms/df3eafa20d2dbd2ef1aa1259fd41d96c42a36cf8/explorer.jpg",
         "sha256": "60f59ba0bab8f0a5633f998ee079bb97618c5183de41b0033bba825bb6cc65ec",
         "description": "Actual browser screenshot of instrumented JavaScript ports of three source sorting approaches, captured after trace parity and browser controls pass."
       },
       {
-        "name": "releases/sorting-algorithms/5a3841b1714bdf4f94321e2737a23d632b5479cd/mobile-explorer.jpg",
+        "name": "releases/sorting-algorithms/df3eafa20d2dbd2ef1aa1259fd41d96c42a36cf8/mobile-explorer.jpg",
         "sha256": "0fc240953ec8185c1668ade7a4bd4d173eb147ef6f9ef6050067bdc454f28e1b",
         "description": "Actual 390px browser screenshot with a dense 20-value case; no fabricated interface or runtime claim."
       }
