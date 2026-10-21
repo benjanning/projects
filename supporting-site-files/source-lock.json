@@ -185,9 +185,9 @@
   },
   "hotel-booking": {
     "repository": "benjanning/cork-city-hotel",
-    "source_revision": "4214b29b3e705cf9da130fd305e9d29dd5d7cf46",
-    "export_revision": "93ba0248b74387e2b8d7185f43300564738c0247",
-    "verification_run": 39431496033,
+    "source_revision": "afeb025eca293f6775e457b9c24f192fbd3edcc4",
+    "export_revision": "f95f41210ec241e053226f36248e00e696d378b3",
+    "verification_run": 39579828889,
     "assets": [
       {
         "name": "homepage.jpg",
@@ -197,32 +197,32 @@
       },
       {
         "name": "rooms.jpg",
-        "sha256": "8d2ea1fdc1ec3834f08dda0a7ce82f18c636fec1d1e933d1e642282be35417cd",
-        "bytes": 89867,
+        "sha256": "0dfd5c99aa45e54e3b2b393f8d7bc8412070e18e461766fec630a3fe3c073400",
+        "bytes": 89833,
         "provenance": "Actual shared-frontend static browser capture after successful Express/static journey, validation, reload, reset and mobile checks. Future dates calculated at capture time; synthetic records; licensed illustrative photograph credited in public/credits.html."
       },
       {
         "name": "guest-form.jpg",
-        "sha256": "fe4ed899825d5c0ea80aa6ff5c57c0e569c0d5d06d2a3a8821ba125a0d293e97",
-        "bytes": 75342,
+        "sha256": "55cbf3b19d617c6ca026a526341bfa5a8785a0e9acf4cbc52e9e1eb2c7ed4ff4",
+        "bytes": 76083,
         "provenance": "Actual shared-frontend static browser capture after successful Express/static journey, validation, reload, reset and mobile checks. Future dates calculated at capture time; synthetic records; licensed illustrative photograph credited in public/credits.html."
       },
       {
         "name": "review.jpg",
-        "sha256": "756ffb005c945bbf93679a39342fcb32ed1d1bd6124e909678a2bdc32432452e",
-        "bytes": 74132,
+        "sha256": "de03fc8e47d68eb5f32d0ab0b1612b7ef54ae3768fb1e11b5a311dbe27adc5c6",
+        "bytes": 74974,
         "provenance": "Actual shared-frontend static browser capture after successful Express/static journey, validation, reload, reset and mobile checks. Future dates calculated at capture time; synthetic records; licensed illustrative photograph credited in public/credits.html."
       },
       {
         "name": "confirmation.jpg",
-        "sha256": "11d9529d684e5a3bbe67b2e5e59d6c3fff042d6bdffd2cea09945625393a5115",
-        "bytes": 86343,
+        "sha256": "514d85179a535d0f1c55ca2ef8489b2570d49d859701d50d4be25742360c5f34",
+        "bytes": 87049,
         "provenance": "Actual shared-frontend static browser capture after successful Express/static journey, validation, reload, reset and mobile checks. Future dates calculated at capture time; synthetic records; licensed illustrative photograph credited in public/credits.html."
       },
       {
         "name": "mobile-confirmation.jpg",
-        "sha256": "54d13323e8dd7c8ccb4304b3a791aea1856edaff1c8f831aa9e832f100650c51",
-        "bytes": 66655,
+        "sha256": "67de5a61e302310945458b686910ea87efa6f29a24c9b59ab4de43f1b285b98a",
+        "bytes": 66838,
         "provenance": "Actual shared-frontend static browser capture after successful Express/static journey, validation, reload, reset and mobile checks. Future dates calculated at capture time; synthetic records; licensed illustrative photograph credited in public/credits.html."
       },
       {
@@ -230,6 +230,12 @@
         "sha256": "7cd7fa5cee9d338b362b06bc2b5b0c2aa96efe956f9157a4b11973f596da9e7e",
         "bytes": 74460,
         "provenance": "Actual shared-frontend static browser capture after successful Express/static journey, validation, reload, reset and mobile checks. Future dates calculated at capture time; synthetic records; licensed illustrative photograph credited in public/credits.html."
+      },
+      {
+        "name": "refreshed-review.jpg",
+        "sha256": "cfba459ed3447d585765b6849df2d8a62a69debdc4c34861755612b6d5330fa3",
+        "bytes": 93745,
+        "provenance": "Actual Express browser capture after clearing its isolated test session cookies and attempting confirmation. The application restores a genuine review with preserved sample guest details and requires a second explicit confirmation; no real booking or payment."
       }
     ]
   }
