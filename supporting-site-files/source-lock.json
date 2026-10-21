@@ -163,9 +163,9 @@
   },
   "sorting-algorithms": {
     "repository": "benjanning/Sorting-Algorithms-Project",
-    "source_revision": "df3eafa20d2dbd2ef1aa1259fd41d96c42a36cf8",
-    "export_revision": "63c9ff1b136d70bf5b12c7a7477ed606c9b45cf7",
-    "verification_run": 39432877151,
+    "source_revision": "0eae4a2cac4d84c0e48cb72a0711133f643bce49",
+    "export_revision": "81ac8d574d7b3978d53d5b034cc28a6914813cdd",
+    "verification_run": 39608142867,
     "assets": [
       {
         "name": "benchmark.png",
@@ -181,15 +181,33 @@
       },
       {
         "name": "explorer.jpg",
-        "sha256": "60f59ba0bab8f0a5633f998ee079bb97618c5183de41b0033bba825bb6cc65ec",
-        "bytes": 149920,
+        "sha256": "f90bd294f620ddcbcbedbb969a92c5433397bdfdfc16af42aeb273c2bec729d1",
+        "bytes": 212590,
         "provenance": "Actual browser screenshot of instrumented JavaScript ports of three source sorting approaches, captured after trace parity and browser controls pass."
       },
       {
         "name": "mobile-explorer.jpg",
-        "sha256": "0fc240953ec8185c1668ade7a4bd4d173eb147ef6f9ef6050067bdc454f28e1b",
-        "bytes": 109827,
+        "sha256": "7d069025dead98d6f959eb06023f7d02a6111eb450180c94a3f1fd84c83d1519",
+        "bytes": 153928,
         "provenance": "Actual 390px browser screenshot with a dense 20-value case; no fabricated interface or runtime claim."
+      },
+      {
+        "name": "operation-comparison.png",
+        "sha256": "8ca5d5a05c0c842ce0e8b7259a00130c0efd0726ef4c1e14a1885adf3ff9984f",
+        "bytes": 102108,
+        "provenance": "Genuine browser capture after checking shared-input comparison totals, trace selection/reset, custom input validation and dense 24-value mobile layout. Actual JavaScript trace counts; original Python runtime measurements are preserved separately."
+      },
+      {
+        "name": "custom-trace.png",
+        "sha256": "2911e50ccaa632e08b273a2352db50a2f0bb77afaaae66585c4c45c723e1aa21",
+        "bytes": 84013,
+        "provenance": "Genuine browser capture after checking shared-input comparison totals, trace selection/reset, custom input validation and dense 24-value mobile layout. Actual JavaScript trace counts; original Python runtime measurements are preserved separately."
+      },
+      {
+        "name": "custom-mobile.jpg",
+        "sha256": "87ec86b5900d56a77eae7238c2c03d116114249250a3b57212931a164cc4d663",
+        "bytes": 174846,
+        "provenance": "Genuine browser capture after checking shared-input comparison totals, trace selection/reset, custom input validation and dense 24-value mobile layout. Actual JavaScript trace counts; original Python runtime measurements are preserved separately."
       }
     ]
   },
