@@ -75,9 +75,9 @@
   },
   "machine-learning": {
     "repository": "benjanning/pfda-Project2",
-    "source_revision": "e8240c77b22622690ff3190e04a2330a72ac1ffb",
-    "export_revision": "3d102b884d0e5ad390631d7b680a0ab6bf764dcb",
-    "verification_run": 39428021220,
+    "source_revision": "0ecd0b99d3d3bcb6cb4dc93835a48ba9d8bb6fa3",
+    "export_revision": "14f78d591321a62aeb3a910bc1d9cfd1549c9412",
+    "verification_run": 39582331653,
     "assets": [
       {
         "name": "comparison.png",
@@ -96,6 +96,24 @@
         "sha256": "199c6190b817af482e6acec1fa8e8b989a9a521462dc1c925a90ff742e521879",
         "bytes": 97795,
         "provenance": "Descriptive histograms from the complete public Wisconsin dataset. Shared bins; no feature selection or clinical claim."
+      },
+      {
+        "name": "explorer.jpg",
+        "sha256": "f22f6a4500d2a11d61118a58a88c01c5ef2b24560e0850beddf0891fe1f536f8",
+        "bytes": 130663,
+        "provenance": "Genuine browser capture of the read-only results explorer after exact confusion-count/metric checks for all three saved models and the training-majority baseline. Uses exported source-validated predictions; no patient inputs, runtime training or clinical validation."
+      },
+      {
+        "name": "baseline.jpg",
+        "sha256": "8ac3151c1442407b63328f600488ca67176d3f781576405d24bf4e5d5945468c",
+        "bytes": 129681,
+        "provenance": "Genuine browser capture of the read-only results explorer after exact confusion-count/metric checks for all three saved models and the training-majority baseline. Uses exported source-validated predictions; no patient inputs, runtime training or clinical validation."
+      },
+      {
+        "name": "mobile-explorer.jpg",
+        "sha256": "3128c82072ba1d9249427bdaf85bd5768e9488e4488615c726b477f0b15773a9",
+        "bytes": 283047,
+        "provenance": "Genuine browser capture of the read-only results explorer after exact confusion-count/metric checks for all three saved models and the training-majority baseline. Uses exported source-validated predictions; no patient inputs, runtime training or clinical validation."
       }
     ]
   },
