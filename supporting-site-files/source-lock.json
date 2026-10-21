@@ -119,9 +119,9 @@
   },
   "applied-statistics": {
     "repository": "benjanning/applied_statistics",
-    "source_revision": "fc9f72275326e0ab2a6ba03a0aba27574ddd0c26",
-    "export_revision": "447dd6a4e42450afcd29745edafac1238dbb54e9",
-    "verification_run": 39429112983,
+    "source_revision": "f8135c9dd3053b63d32ee8143a32a98da698ff83",
+    "export_revision": "2c551e90f0cc9c909eab7a00a57037b98c49eceb",
+    "verification_run": 39585287880,
     "assets": [
       {
         "name": "observations.png",
@@ -140,6 +140,24 @@
         "sha256": "0f47c3d47f0ec70a606bdd8c1b8ce8cfa150a26ab7f6cbb14b2902a89a8e1fdc",
         "bytes": 78868,
         "provenance": "Three two-sided Welch mean differences with three-comparison Bonferroni-adjusted familywise 95% approximate intervals and adjusted p-values."
+      },
+      {
+        "name": "explorer.png",
+        "sha256": "314188574255a6b3cdccf445efc7925efd7a2ed910b3e85b4536144f5142ecb4",
+        "bytes": 121833,
+        "provenance": "Genuine browser capture of the PlantGrowth comparison lab after checking all three saved comparisons and original observation-table values at desktop/mobile widths. Real source observations, exact shared computation, fixed Welch/Bonferroni methods; no fabricated observations or treatment recommendation."
+      },
+      {
+        "name": "comparison-detail.png",
+        "sha256": "28201d4e85758ae249b0dd7f26ef63bb01a571f6c74b7aeeee3b7990731fa287",
+        "bytes": 132432,
+        "provenance": "Genuine browser capture of the PlantGrowth comparison lab after checking all three saved comparisons and original observation-table values at desktop/mobile widths. Real source observations, exact shared computation, fixed Welch/Bonferroni methods; no fabricated observations or treatment recommendation."
+      },
+      {
+        "name": "mobile-explorer.jpg",
+        "sha256": "3a380044e87c8825c65786b6a8abf8e99a2ce38cebf5a97cef43d80305ef5bce",
+        "bytes": 355369,
+        "provenance": "Genuine browser capture of the PlantGrowth comparison lab after checking all three saved comparisons and original observation-table values at desktop/mobile widths. Real source observations, exact shared computation, fixed Welch/Bonferroni methods; no fabricated observations or treatment recommendation."
       }
     ]
   },
