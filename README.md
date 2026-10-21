@@ -14,7 +14,7 @@ The two application demos run synthetic data in your browser. Flask, Express and
 
 | Project | What to explore | Technologies |
 | --- | --- | --- |
-| [Car rental management](https://benjanning.github.io/projects/projects/car-rental/) · [Source](https://github.com/benjanning/data-representation-project) | A polished workspace for vehicle inventory and customer records, with a tested Flask API and an explicitly static public demonstration. | Python, Flask, MySQL, JavaScript |
+| [Fleetdesk rental management](https://benjanning.github.io/projects/projects/car-rental/) · [Source](https://github.com/benjanning/data-representation-project) | Quote a rental, allocate an available vehicle and manage demonstration reservations with tested date, pricing and concurrency rules. | Python, Flask, MySQL, JavaScript |
 | [Breast cancer classification](https://benjanning.github.io/projects/projects/machine-learning/) · [Source](https://github.com/benjanning/pfda-Project2) | Compare three classifiers, inspect their mistakes and understand the limits of a single public dataset. | Python, pandas, scikit-learn, Seaborn |
 | [Hotel booking prototype](https://benjanning.github.io/projects/projects/hotel-booking/) · [Source](https://github.com/benjanning/cork-city-hotel) | A complete demonstration booking journey, from dates and room cards to guest details and confirmation. | Node.js, Express, EJS, MySQL |
 | [Plant growth & statistics](https://benjanning.github.io/projects/projects/applied-statistics/) · [Source](https://github.com/benjanning/applied_statistics) | Explore thirty plant-growth observations, compare the groups and explain what the statistics can—and cannot—support. | Python, SciPy, statsmodels, pandas |
