@@ -14,7 +14,7 @@ The two application demos run synthetic data in your browser. Flask, Express and
 
 | Project | What to explore | Technologies |
 | --- | --- | --- |
-| [Fleetdesk rental management](https://benjanning.github.io/projects/projects/car-rental/) · [Source](https://github.com/benjanning/data-representation-project) | Quote a rental, allocate an available vehicle and manage demonstration reservations with tested date, pricing and concurrency rules. | Python, Flask, MySQL, JavaScript |
+| [Fleetdesk rental management](https://benjanning.github.io/projects/projects/car-rental/) · [Source](https://github.com/benjanning/data-representation-project) | See which vehicles fit a rental period, quote and allocate safely, then search and export the saved reservation records. | Python, Flask, MySQL, JavaScript |
 | [Breast cancer classification](https://benjanning.github.io/projects/projects/machine-learning/) · [Source](https://github.com/benjanning/pfda-Project2) | Explore saved classifier errors, compare a training-majority baseline and see why accuracy alone can mislead. | Python, pandas, scikit-learn, Seaborn |
 | [Hotel booking prototype](https://benjanning.github.io/projects/projects/hotel-booking/) · [Source](https://github.com/benjanning/cork-city-hotel) | A polished multi-step hotel demonstration with exact pricing, stable confirmation retries and recoverable booking reviews. | Node.js, Express, EJS, MySQL |
 | [Plant growth & statistics](https://benjanning.github.io/projects/projects/applied-statistics/) · [Source](https://github.com/benjanning/applied_statistics) | Explore every measurement, compare the size of group differences and keep statistical uncertainty visible. | Python, SciPy, pandas, JavaScript |
