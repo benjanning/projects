@@ -99,9 +99,9 @@
   },
   "machine-learning": {
     "repository": "benjanning/pfda-Project2",
-    "source_revision": "0ecd0b99d3d3bcb6cb4dc93835a48ba9d8bb6fa3",
-    "export_revision": "14f78d591321a62aeb3a910bc1d9cfd1549c9412",
-    "verification_run": 39582331653,
+    "source_revision": "3cf53af3e9013383698cbd71b04d1e7ed1c12ab6",
+    "export_revision": "9a3f7ebe83e819450739a8afe8aac7026de4da5e",
+    "verification_run": 39788278296,
     "assets": [
       {
         "name": "comparison.png",
@@ -135,17 +135,29 @@
       },
       {
         "name": "mobile-explorer.jpg",
-        "sha256": "3128c82072ba1d9249427bdaf85bd5768e9488e4488615c726b477f0b15773a9",
-        "bytes": 283047,
+        "sha256": "a5cbc06372edbace4b590f5b94a0d3e309fb28d2467939bcec5b5d6b529e3579",
+        "bytes": 381432,
         "provenance": "Genuine browser capture of the read-only results explorer after exact confusion-count/metric checks for all three saved models and the training-majority baseline. Uses exported source-validated predictions; no patient inputs, runtime training or clinical validation."
+      },
+      {
+        "name": "paired-errors.jpg",
+        "sha256": "d8b1f786fe589e30bc852a6e018ff48c497d9e910a1ba3b3e275114914bce52c",
+        "bytes": 123983,
+        "provenance": "Genuine browser capture after independently reconciling all sixteen approach pairs and four groups against saved holdout-predictions.csv at desktop and 390px widths. The unchanged default logistic-regression/random-forest comparison has 171 rows: four shared errors, six errors unique to each and 155 both correct. Anonymous zero-based source positions only; no runtime training or clinical service."
+      },
+      {
+        "name": "paired-mobile.jpg",
+        "sha256": "92c1b5dadc7a21e84fcbb4179dd78fb508465e392f2aafea0c9304a1ac51c9c1",
+        "bytes": 99669,
+        "provenance": "Genuine browser capture after independently reconciling all sixteen approach pairs and four groups against saved holdout-predictions.csv at desktop and 390px widths. The unchanged default logistic-regression/random-forest comparison has 171 rows: four shared errors, six errors unique to each and 155 both correct. Anonymous zero-based source positions only; no runtime training or clinical service."
       }
     ]
   },
   "applied-statistics": {
     "repository": "benjanning/applied_statistics",
-    "source_revision": "f8135c9dd3053b63d32ee8143a32a98da698ff83",
-    "export_revision": "2c551e90f0cc9c909eab7a00a57037b98c49eceb",
-    "verification_run": 39585287880,
+    "source_revision": "ddaa7ac0dd99cfc00c78977341c6623e230f159e",
+    "export_revision": "84aa62e9a0c673103b2358d66d5dca611b45bd16",
+    "verification_run": 39790149844,
     "assets": [
       {
         "name": "observations.png",
@@ -167,29 +179,47 @@
       },
       {
         "name": "explorer.png",
-        "sha256": "314188574255a6b3cdccf445efc7925efd7a2ed910b3e85b4536144f5142ecb4",
-        "bytes": 121833,
+        "sha256": "5980455fd2c7f3a745be1b1edc5b9f63269038b38806e2dc5d0a5bcee80c2a98",
+        "bytes": 138285,
         "provenance": "Genuine browser capture of the PlantGrowth comparison lab after checking all three saved comparisons and original observation-table values at desktop/mobile widths. Real source observations, exact shared computation, fixed Welch/Bonferroni methods; no fabricated observations or treatment recommendation."
       },
       {
         "name": "comparison-detail.png",
-        "sha256": "28201d4e85758ae249b0dd7f26ef63bb01a571f6c74b7aeeee3b7990731fa287",
-        "bytes": 132432,
+        "sha256": "62100a50696477775615e097dc6b1bf710c678fe3aa10273d67975d36235c968",
+        "bytes": 132445,
         "provenance": "Genuine browser capture of the PlantGrowth comparison lab after checking all three saved comparisons and original observation-table values at desktop/mobile widths. Real source observations, exact shared computation, fixed Welch/Bonferroni methods; no fabricated observations or treatment recommendation."
       },
       {
         "name": "mobile-explorer.jpg",
-        "sha256": "3a380044e87c8825c65786b6a8abf8e99a2ce38cebf5a97cef43d80305ef5bce",
-        "bytes": 355369,
+        "sha256": "38edd75401ac4939d782a15eabb691ba1c7a55c6c3df452ebd94c4c5f82860f0",
+        "bytes": 387221,
         "provenance": "Genuine browser capture of the PlantGrowth comparison lab after checking all three saved comparisons and original observation-table values at desktop/mobile widths. Real source observations, exact shared computation, fixed Welch/Bonferroni methods; no fabricated observations or treatment recommendation."
+      },
+      {
+        "name": "spread.jpg",
+        "sha256": "db9fc19a3fdec9e2b6c9ef4ed34e874103c6d88bb67c65a59af17c20d0dd4afa",
+        "bytes": 105824,
+        "provenance": "Genuine browser capture of the same thirty PlantGrowth observations. Native controls switch mean ± one sample SD versus pointwise 95% mean intervals; all point coordinates and the axis scale are preserved. Exact endpoints independently checked from the original CSV; desktop and 390px browser checks include keyboard interaction. No fabricated measurements, coverage claim or treatment recommendation."
+      },
+      {
+        "name": "mean-interval.jpg",
+        "sha256": "874d59fcc3ca804fe6caadbcc52771994c9956b016103b59f2b061e7a680f0eb",
+        "bytes": 106905,
+        "provenance": "Genuine browser capture of the same thirty PlantGrowth observations. Native controls switch mean ± one sample SD versus pointwise 95% mean intervals; all point coordinates and the axis scale are preserved. Exact endpoints independently checked from the original CSV; desktop and 390px browser checks include keyboard interaction. No fabricated measurements, coverage claim or treatment recommendation."
+      },
+      {
+        "name": "mobile-spread.jpg",
+        "sha256": "57753b70a56866144c938d8aac771b7f4963a63f8c7f832d415b1bb498a8ac43",
+        "bytes": 91219,
+        "provenance": "Genuine browser capture of the same thirty PlantGrowth observations. Native controls switch mean ± one sample SD versus pointwise 95% mean intervals; all point coordinates and the axis scale are preserved. Exact endpoints independently checked from the original CSV; desktop and 390px browser checks include keyboard interaction. No fabricated measurements, coverage claim or treatment recommendation."
       }
     ]
   },
   "sorting-algorithms": {
     "repository": "benjanning/Sorting-Algorithms-Project",
-    "source_revision": "0eae4a2cac4d84c0e48cb72a0711133f643bce49",
-    "export_revision": "81ac8d574d7b3978d53d5b034cc28a6914813cdd",
-    "verification_run": 39608142867,
+    "source_revision": "c3f9946013e9fe8ee7685f4f08b527f9aea599dd",
+    "export_revision": "9c7d06a3a07dbdb4de32601931c8f382a70a159e",
+    "verification_run": 39841922512,
     "assets": [
       {
         "name": "benchmark.png",
@@ -205,58 +235,76 @@
       },
       {
         "name": "explorer.jpg",
-        "sha256": "f90bd294f620ddcbcbedbb969a92c5433397bdfdfc16af42aeb273c2bec729d1",
-        "bytes": 212590,
+        "sha256": "bc205ca6b2158cdf77f0f55d1a3742318187223664f2eca0e09c7818cbcd5f0f",
+        "bytes": 240964,
         "provenance": "Actual browser screenshot of instrumented JavaScript ports of three source sorting approaches, captured after trace parity and browser controls pass."
       },
       {
         "name": "mobile-explorer.jpg",
-        "sha256": "7d069025dead98d6f959eb06023f7d02a6111eb450180c94a3f1fd84c83d1519",
-        "bytes": 153928,
+        "sha256": "561dfed1c3964b60a4ad84c5205ea3a3c597b054ac5ad9f8b49bbb1f9284209f",
+        "bytes": 183703,
         "provenance": "Actual 390px browser screenshot with a dense 20-value case; no fabricated interface or runtime claim."
       },
       {
         "name": "operation-comparison.png",
-        "sha256": "8ca5d5a05c0c842ce0e8b7259a00130c0efd0726ef4c1e14a1885adf3ff9984f",
-        "bytes": 102108,
+        "sha256": "28e9093e240c6abcb0548d81a924d0b107fa4d02017eb7d966fef754aa6bcd4b",
+        "bytes": 128506,
         "provenance": "Genuine browser capture after checking shared-input comparison totals, trace selection/reset, custom input validation and dense 24-value mobile layout. Actual JavaScript trace counts; original Python runtime measurements are preserved separately."
       },
       {
         "name": "custom-trace.png",
-        "sha256": "2911e50ccaa632e08b273a2352db50a2f0bb77afaaae66585c4c45c723e1aa21",
-        "bytes": 84013,
+        "sha256": "16dae5466d99fce3c1f1c104ba1e030dc82f8cf9f688a36913aec026bb58a1a1",
+        "bytes": 102049,
         "provenance": "Genuine browser capture after checking shared-input comparison totals, trace selection/reset, custom input validation and dense 24-value mobile layout. Actual JavaScript trace counts; original Python runtime measurements are preserved separately."
       },
       {
         "name": "custom-mobile.jpg",
-        "sha256": "87ec86b5900d56a77eae7238c2c03d116114249250a3b57212931a164cc4d663",
-        "bytes": 174846,
+        "sha256": "f4d3a797cdb3c50c4e6c16cdb4f5b85d7b404fc2dd5aa3285013ccb460a3ff69",
+        "bytes": 205139,
         "provenance": "Genuine browser capture after checking shared-input comparison totals, trace selection/reset, custom input validation and dense 24-value mobile layout. Actual JavaScript trace counts; original Python runtime measurements are preserved separately."
+      },
+      {
+        "name": "item-origins.jpg",
+        "sha256": "6592d46561cc125632379bee9cd657bfce449f277e447f70d2883cd896af6f4a",
+        "bytes": 77908,
+        "provenance": "Actual browser capture after identity/value reconciliation, known equal-value reversals and desktop/mobile journeys. Original positions follow actual exchanges on one shared custom input; order claims are limited to that example. Dense 24-item mobile labels and keyboard scrolling are checked separately. Python code and recorded measurements remain unchanged."
+      },
+      {
+        "name": "mobile-item-origins.jpg",
+        "sha256": "5d626fc8732ab21eb43a60363abc3fd77558c71677ea4753637c6ea20df3247d",
+        "bytes": 65704,
+        "provenance": "Actual browser capture after identity/value reconciliation, known equal-value reversals and desktop/mobile journeys. Original positions follow actual exchanges on one shared custom input; order claims are limited to that example. Dense 24-item mobile labels and keyboard scrolling are checked separately. Python code and recorded measurements remain unchanged."
+      },
+      {
+        "name": "equal-order-comparison.jpg",
+        "sha256": "0a2952b8cb4e18f1013b1e71a6c20ebbcea76d268a1b1244a589dd38fede0c29",
+        "bytes": 103629,
+        "provenance": "Actual browser capture after identity/value reconciliation, known equal-value reversals and desktop/mobile journeys. Original positions follow actual exchanges on one shared custom input; order claims are limited to that example. Dense 24-item mobile labels and keyboard scrolling are checked separately. Python code and recorded measurements remain unchanged."
       }
     ]
   },
   "iris-analysis": {
     "repository": "benjanning/pands-project",
-    "source_revision": "72eba1e1259603e907493f0d873110b4d32666fb",
-    "export_revision": "9fa1e88b97e71990a8b0ac03f7d4a61fbba4af02",
-    "verification_run": 39613731111,
+    "source_revision": "76be48a2f27f997b712253bf42454c6737c7eb94",
+    "export_revision": "a952e9ab37f39baa0552ace32ec9119884f278ed",
+    "verification_run": 39843676416,
     "assets": [
       {
         "name": "explorer.png",
-        "sha256": "813ff41485df14f7e258586ac0399e9e1c4ad4301accc97128544f6066c2561c",
-        "bytes": 146039,
+        "sha256": "ac863b46ba12d34fde79b2cac1fbafbec0ae96a30c3e5593bbe62e95722282aa",
+        "bytes": 136643,
         "provenance": "Real Chromium capture of the tested explorer with all 150 original source observations."
       },
       {
         "name": "filtered.png",
-        "sha256": "7f08cf9ca0ee07700740088e2a5393db2381ed018b45f6ab9c13e3438a429216",
-        "bytes": 115034,
+        "sha256": "33beea3c5d70a12e695658ecd32cf2cac5676b4a1ba1f37bc992cb78f7138ee4",
+        "bytes": 105922,
         "provenance": "Real Chromium capture after filtering to the fifty supplied Virginica rows."
       },
       {
         "name": "explorer-mobile.jpg",
-        "sha256": "9de0564cb27ec32721096edee1b86dbd908f8e6a75fd4bb8f2389a17b65695b9",
-        "bytes": 272367,
+        "sha256": "e235abf3d9963ddf93c5992976f9e6c248fa66b22af2fa399eb503a8cd5389d0",
+        "bytes": 277471,
         "provenance": "Real narrow-screen Chromium capture of working source controls and observations."
       },
       {
@@ -276,14 +324,26 @@
         "sha256": "77db3da56f106a6ba9c592a9a01a3752ffe39f7dada4435f8430349a4d2a8b8e",
         "bytes": 68519,
         "provenance": "Species sample means with plus/minus one observed sample standard deviation; not confidence intervals."
+      },
+      {
+        "name": "distribution.jpg",
+        "sha256": "b0e81a959851a12658b948adfcd214e82ff35f57766e7448dac6d02b4202fe5d",
+        "bytes": 122882,
+        "provenance": "Actual browser capture after verifying all four distribution features, twelve independent quartile references and all 150 source positions. Points retain exact feature values; vertical offsets only separate them, and summary strips show quartiles/median with observed min/max. Species filters, original rows, exports, keyboard controls and 390px layout are checked. No generated observations or classifier claim."
+      },
+      {
+        "name": "distribution-mobile.jpg",
+        "sha256": "1a721fa099f8dc18265eaf35ae4a460a9b9fda42f44bd26dc602caf085a1e9ef",
+        "bytes": 103816,
+        "provenance": "Actual browser capture after verifying all four distribution features, twelve independent quartile references and all 150 source positions. Points retain exact feature values; vertical offsets only separate them, and summary strips show quartiles/median with observed min/max. Species filters, original rows, exports, keyboard controls and 390px layout are checked. No generated observations or classifier claim."
       }
     ]
   },
   "hotel-booking": {
     "repository": "benjanning/cork-city-hotel",
-    "source_revision": "afeb025eca293f6775e457b9c24f192fbd3edcc4",
-    "export_revision": "f95f41210ec241e053226f36248e00e696d378b3",
-    "verification_run": 39579828889,
+    "source_revision": "6dbd749eecc8a44d2d29a7e0ae3a26326653ccd6",
+    "export_revision": "c00bad25dfd35a254da9bc3f6557eae566bb38be",
+    "verification_run": 39844728165,
     "assets": [
       {
         "name": "homepage.jpg",
@@ -293,32 +353,32 @@
       },
       {
         "name": "rooms.jpg",
-        "sha256": "0dfd5c99aa45e54e3b2b393f8d7bc8412070e18e461766fec630a3fe3c073400",
-        "bytes": 89833,
+        "sha256": "4d37d9edc569963db3ace173bcbed2d758ac294f4c1c25954f0e06e255ba7065",
+        "bytes": 116135,
         "provenance": "Actual shared-frontend static browser capture after successful Express/static journey, validation, reload, reset and mobile checks. Future dates calculated at capture time; synthetic records; licensed illustrative photograph credited in public/credits.html."
       },
       {
         "name": "guest-form.jpg",
-        "sha256": "55cbf3b19d617c6ca026a526341bfa5a8785a0e9acf4cbc52e9e1eb2c7ed4ff4",
-        "bytes": 76083,
+        "sha256": "d13114dbb185c1ae3dc61cfefa033278fe4d2c2105d13f57a845317d3f36b87d",
+        "bytes": 76085,
         "provenance": "Actual shared-frontend static browser capture after successful Express/static journey, validation, reload, reset and mobile checks. Future dates calculated at capture time; synthetic records; licensed illustrative photograph credited in public/credits.html."
       },
       {
         "name": "review.jpg",
-        "sha256": "de03fc8e47d68eb5f32d0ab0b1612b7ef54ae3768fb1e11b5a311dbe27adc5c6",
-        "bytes": 74974,
+        "sha256": "8d25f3de691a72a4bb9da26e52bcbe214f1d3cb111d2fbba37ee7f606ae2acf8",
+        "bytes": 74921,
         "provenance": "Actual shared-frontend static browser capture after successful Express/static journey, validation, reload, reset and mobile checks. Future dates calculated at capture time; synthetic records; licensed illustrative photograph credited in public/credits.html."
       },
       {
         "name": "confirmation.jpg",
-        "sha256": "514d85179a535d0f1c55ca2ef8489b2570d49d859701d50d4be25742360c5f34",
-        "bytes": 87049,
+        "sha256": "473e5f60a6ddfb24e1876cdf5b30741d100f40bc6eaa9b56f5c076edb4eb6bec",
+        "bytes": 87176,
         "provenance": "Actual shared-frontend static browser capture after successful Express/static journey, validation, reload, reset and mobile checks. Future dates calculated at capture time; synthetic records; licensed illustrative photograph credited in public/credits.html."
       },
       {
         "name": "mobile-confirmation.jpg",
-        "sha256": "67de5a61e302310945458b686910ea87efa6f29a24c9b59ab4de43f1b285b98a",
-        "bytes": 66838,
+        "sha256": "12c42fd4ba3f994246dc35fa2e1ccd18fb18c47abb59a885794d38db320ca370",
+        "bytes": 66815,
         "provenance": "Actual shared-frontend static browser capture after successful Express/static journey, validation, reload, reset and mobile checks. Future dates calculated at capture time; synthetic records; licensed illustrative photograph credited in public/credits.html."
       },
       {
@@ -329,9 +389,27 @@
       },
       {
         "name": "refreshed-review.jpg",
-        "sha256": "cfba459ed3447d585765b6849df2d8a62a69debdc4c34861755612b6d5330fa3",
-        "bytes": 93745,
+        "sha256": "f0fac385486630e59f977f97f53aa6ce4f390cccebd4ceab9097c104f9902384",
+        "bytes": 93722,
         "provenance": "Actual Express browser capture after clearing its isolated test session cookies and attempting confirmation. The application restores a genuine review with preserved sample guest details and requires a second explicit confirmation; no real booking or payment."
+      },
+      {
+        "name": "stay-comparison.jpg",
+        "sha256": "2824af291566397bfa7f8e23f92ad7e55465bb9df6e65e8f6b74556dc222801f",
+        "bytes": 133222,
+        "provenance": "Actual shared static frontend browser capture from the comparison journey also tested in Express. Six synthetic guests, three nights, current-quantity totals and explicit minimum-room repair; capture dates relative to run. No real inventory, bookings or payments. Mobile image uses a 390px viewport."
+      },
+      {
+        "name": "quantity-repaired.jpg",
+        "sha256": "04a2cecee137dc8e0ed2506bb56eb7b28b2d6c1022e81022c927787316c50bed",
+        "bytes": 129805,
+        "provenance": "Actual shared static frontend browser capture from the comparison journey also tested in Express. Six synthetic guests, three nights, current-quantity totals and explicit minimum-room repair; capture dates relative to run. No real inventory, bookings or payments. Mobile image uses a 390px viewport."
+      },
+      {
+        "name": "mobile-stay-comparison.jpg",
+        "sha256": "1dad3fdbbec9a30ec9e5c2abe970c941140ee736532f65f4b0e692f65612c0a8",
+        "bytes": 108129,
+        "provenance": "Actual shared static frontend browser capture from the comparison journey also tested in Express. Six synthetic guests, three nights, current-quantity totals and explicit minimum-room repair; capture dates relative to run. No real inventory, bookings or payments. Mobile image uses a 390px viewport."
       }
     ]
   }
